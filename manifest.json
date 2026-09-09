@@ -1,0 +1,11 @@
+{
+  "name": "Passepartout — Un atlante di storie",
+  "short_name": "Passepartout",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fbf7ef",
+  "theme_color": "#8c5a3c",
+  "icons": [
+    { "src": "cover.jpg", "sizes": "816x1310", "type": "image/jpeg" }
+  ]
+}
