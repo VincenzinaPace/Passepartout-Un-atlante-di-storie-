@@ -48,6 +48,7 @@ function renderHome() {
   const m = DATA.meta;
   const routeCards = DATA.routes.map((r, i) => `
     <a class="route-card" href="#/rotta/${i+1}" style="text-decoration:none;">
+      <img class="route-card-icon" src="${escapeHtml(r.icon)}" alt="">
       <div class="num">Rotta ${i+1}</div>
       <h3>${escapeHtml(r.title)}</h3>
       <div class="q">${escapeHtml(r.question || '')}</div>
@@ -62,6 +63,7 @@ function renderHome() {
       <div class="stats">${escapeHtml(m.tagline_stats)}</div>
       <div class="author">a cura di ${escapeHtml(m.author)}</div>
       <div class="year">${escapeHtml(m.year)}</div>
+      ${m.cover_credit ? `<div class="credit">${escapeHtml(m.cover_credit)}</div>` : ''}
     </section>
 
     <section class="intro-block">
@@ -126,7 +128,10 @@ function renderRoute(idx) {
   $app.innerHTML = `
     <div class="route-header">
       <div class="kicker">Rotta ${idx} di 10</div>
-      <h1>${escapeHtml(r.title)}</h1>
+      <div class="route-title-row">
+        <img class="route-icon" src="${escapeHtml(r.icon)}" alt="">
+        <h1>${escapeHtml(r.title)}</h1>
+      </div>
       <div class="question">${escapeHtml(r.question || '')}</div>
       ${r.mix ? `<div class="mix">Mix di genere: ${escapeHtml(r.mix)}</div>` : ''}
     </div>
@@ -340,6 +345,12 @@ function renderAppendici() {
 
     <h2>Note per l'insegnante</h2>
     ${note}
+
+    <h2>L'autrice</h2>
+    <div class="autrice">
+      <img src="autrice.jpg" alt="Vincenzina Pace">
+      <p>${escapeHtml(DATA.autrice_bio || '')}</p>
+    </div>
   `;
   window.scrollTo(0,0);
 }

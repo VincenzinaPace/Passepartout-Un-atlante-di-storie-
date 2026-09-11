@@ -1,4 +1,4 @@
-const CACHE = 'passepartout-v1';
+const CACHE = 'passepartout-v2';
 const ASSETS = [
   './',
   'index.html',
@@ -7,7 +7,10 @@ const ASSETS = [
   'data.js',
   'manifest.json',
   'cover.jpg',
-  'interior.jpg'
+  'interior.jpg',
+  'autrice.jpg',
+  'icon-r1.png','icon-r2.png','icon-r3.png','icon-r4.png','icon-r5.png',
+  'icon-r6.png','icon-r7.png','icon-r8.png','icon-r9.png','icon-r10.png'
 ];
 
 self.addEventListener('install', e => {
