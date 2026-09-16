@@ -108,7 +108,7 @@ function renderRoute(idx) {
 
   const rows = (r.table_rows || []).map(row => {
     const titleHtml = row.titolo_links.length
-      ? row.titolo_links.map(l => `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.text)}</a>`).join('<br>')
+      ? row.titolo_links.map(l => l.url ? `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.text)}</a>` : escapeHtml(l.text)).join('<br>')
       : escapeHtml(row.titolo_full);
     const statoClass = /guida/i.test(row.stato) ? 'guida' : 'conf';
     return `<tr>
