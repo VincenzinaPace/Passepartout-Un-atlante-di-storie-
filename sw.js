@@ -1,4 +1,4 @@
-const CACHE = 'passepartout-v2';
+const CACHE = 'passepartout-v3';
 const ASSETS = [
   './',
   'index.html',
