@@ -4,7 +4,7 @@ const ASSETS = [
   'index.html',
   'style.css',
   'app.js',
-  'data.js',patch-r4.js
+    'data.js','patch-r4.js',
   'manifest.json',
   'cover.jpg',
   'interior.jpg',
